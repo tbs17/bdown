@@ -15,6 +15,7 @@ image_preview = "boards.jpg"
 # Example: `tags = ["machine-learning", "deep-learning"]`
 tags = ["demo"]
 
+
 # Optional external URL for project (replaces project detail page).
 external_link = "http://example.org"
 

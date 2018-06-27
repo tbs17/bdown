@@ -3,8 +3,12 @@ title: "First Post"
 author: "Tracy Shen"
 date: "June 27, 2018"
 output: html_document
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
 ---
 This is my first original post and more is coming!
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
