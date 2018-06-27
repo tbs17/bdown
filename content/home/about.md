@@ -21,7 +21,7 @@ weight = 5
 [[education.courses]]
   course = "PhD Candidate in Data Science"
   institution = "Penn State University"
-  year = 2018-
+  year = 2018-2023
 
 [[education.courses]]
   course = "M.A in International Affairs"
