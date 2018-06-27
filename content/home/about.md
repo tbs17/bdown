@@ -35,8 +35,8 @@ weight = 5
  
 +++
 
-# Biography
+# BI/O
 
-Tracy Shen is a Data Scientist at AccuWeather Inc. and PhD candidate at Penn State University. Her work is focused on leveraging weather to predict loss or gain for business partners while her research interests include user susceptibility prediction to fake news, etc. Out of work and classroom, she's a triathete and rock climber hobbist. She has done 2 Sprint Triathlon and 1 Olympic Distance Triathlon and flew to Mooab,UT for slab rock climbing.
+Tracy Shen is a Data Scientist at AccuWeather Inc. and PhD candidate at Penn State University. Her work is focused on leveraging weather to predict loss or gain for business partners while her research interests include user susceptibility prediction to fake news, etc. 
 
 
