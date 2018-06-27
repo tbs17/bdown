@@ -10,31 +10,33 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Data Science",
+    "Predictive Analytics",
+    "Information Retrieval",
+    "Rock Climbing",
+    "Triathlon"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
+  course = "PhD Candidate in Data Science"
+  institution = "Penn State University"
+  year = 2018-
+
+[[education.courses]]
+  course = "M.A in International Affairs"
+  institution = "Penn State University"
   year = 2012
 
 [[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
+  course = "B.A in English"
+  institution = "Zhejiang University, China"
   year = 2008
  
 +++
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Tracy Shen is a Data Scientist at AccuWeather Inc. and PhD candidate at Penn State University. Her work is focused on leveraging weather to predict loss or gain for business partners while her research interests include user susceptibility prediction to fake news, etc. Out of work and classroom, she's a triathete and rock climber hobbist. She has done 2 Sprint Triathlon and 1 Olympic Distance Triathlon and flew to Mooab,UT for slab rock climbing.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+
