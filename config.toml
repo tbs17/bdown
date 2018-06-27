@@ -226,22 +226,22 @@ enableGitInfo = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:test@example.org"
+    link = "jia.t.shen@gmail.com"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/GeorgeCushen"
+    link = "//twitter.com/JiaShenTracy"
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+    link = "https://scholar.google.com/citations?user=kUBC5d8AAAAJ"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/gcushen"
+    link = "//github.com/tbs17"
 
 
 # Navigation Links
@@ -258,13 +258,8 @@ enableGitInfo = false
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
-
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
+  name = "Blog"
+  url = "#blog"
   weight = 3
 
 [[menu.main]]
@@ -276,6 +271,11 @@ enableGitInfo = false
   name = "Teaching"
   url = "#teaching"
   weight = 5
+
+[[menu.main]]
+  name = "Publications"
+  url = "#publications_selected"
+  weight = 2
 
 [[menu.main]]
   name = "Contact"
