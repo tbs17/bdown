@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2017-10-15T00:00:00
 
-title = " "
+title = "You gain wisdom only when you look back, So think regressively more! "
 
 # Order that this section will appear in.
 weight = 3
