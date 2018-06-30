@@ -1,14 +1,14 @@
 +++
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 
-title = "Example Talk"
-time_start = 2030-06-01T13:00:00
-time_end = 2030-06-01T15:00:00
+title = "SIA Career Panel"
+time_start = 2016-08-26T14:00:00
+time_end = 2016-08-26T15:30:00
 abstract = ""
 abstract_short = ""
-event = "Academic Theme Conference"
-event_url = "https://example.org"
-location = "London, United Kingdom"
+event = "Alumni Career Talk"
+event_url = ""
+location = "Lewis Katz Building, Penn State"
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -17,7 +17,7 @@ selected = false
 #   Associate this talk with one or more of your projects.
 #   Simply enter the filename of your project file in `content/project/`.
 #   Otherwise, set `projects = []`.
-projects = ["deep-learning.md"]
+projects = []
 
 # Links (optional).
 url_pdf = ""
@@ -34,8 +34,8 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption :smile:"
+image = "sia_talk.jpg"
+caption = "I'm the only lady :smile:"
 
 +++
 
