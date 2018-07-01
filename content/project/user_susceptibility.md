@@ -24,7 +24,7 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "headers/bubbles-wide.jpg"
+image = "fact_ke.jpg"
 caption = "My caption :smile:"
 
 +++
