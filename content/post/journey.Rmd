@@ -3,11 +3,13 @@ title: "My Journey to Data Science"
 author: "Tracy Shen"
 date: "July 1, 2018"
 output: html_document
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
-type = 'post'
-
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
 If you have viewed my bio, you will notice that I don't have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don't need a science or engineering background to become a data scientist! Here's my personal trajectory. I think it's highly reproducible:smile:
 
 In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW's new adventure: IoT or we call it emerging platform projects. The mission of the position is to assist the team to build weather based algorithm to power digital health, smart home and connected car apps/widgets. To complete the mission, we need data scientists and I was tasked to research on everything about data scientist as a job. From there, I found the below:
@@ -34,3 +36,7 @@ List of data science related podcast:
 * Learning Machines 101: by Richard Golden
 * Data Stories: Enrico Bertini and Moritz Stefaner
 * Google Cloud Platform Podcast
+
+
+
+
