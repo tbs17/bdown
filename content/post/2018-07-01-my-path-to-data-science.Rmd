@@ -3,9 +3,11 @@ title: My path to data science
 author: Tracy Shen
 date: '2018-07-01'
 slug: my-path-to-data-science
-categories: [random]
-tags: [random]
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+type = 'post'
 draft: yes
+
 ---
 
 If you have viewed my bio, you will notice that I don't have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don't need a science or engineering background to become a data scientist! Here's my personal trajectory. I think it's highly reproducible:smile:
