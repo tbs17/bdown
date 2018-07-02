@@ -1,49 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plot on Academic</title>
-    <link>/tags/plot/</link>
-    <description>Recent content in Plot on Academic</description>
+    <title>Plot on Think Regressively</title>
+    <link>https://thinkregressively.netlify.com/tags/plot/</link>
+    <description>Recent content in Plot on Think Regressively</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
-	<atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://thinkregressively.netlify.com/tags/plot/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>try to trigger the auto update on netlify
-R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.</description>
-    </item>
     
     <item>
-      <title>First Post</title>
-      <link>/post/first_post/</link>
+      <title>journey</title>
+      <link>https://thinkregressively.netlify.com/post/journey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/first_post/</guid>
-      <description>This is my first original post and more is coming!
-R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
-    </item>
-    
-    <item>
-      <title>test post</title>
-      <link>/post/test_post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/test_post/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min.</description>
+      <guid>https://thinkregressively.netlify.com/post/journey/</guid>
+      <description>R MarkdownIf you have viewed my bio, you will notice that I don’t have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don’t need a science or engineering background to become a data scientist! Here’s my personal trajectory. I think it’s highly reproducible:smile:
+In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW’s new adventure: IoT or we call it emerging platform projects.</description>
     </item>
     
   </channel>

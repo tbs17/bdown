@@ -1,11 +1,10 @@
 ---
-title: "My Journey to Data Science"
+title: "journey"
 author: "Tracy Shen"
-date: "July 1, 2018"
+date: "July 2, 2018"
 output: html_document
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
-
 ---
 
 ```{r setup, include=FALSE}
@@ -39,7 +38,3 @@ List of data science related podcast:
 * Learning Machines 101: by Richard Golden
 * Data Stories: Enrico Bertini and Moritz Stefaner
 * Google Cloud Platform Podcast
-
-
-
-
