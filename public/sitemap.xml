@@ -87,8 +87,7 @@
     
     <url>
     
-      <loc>https://thinkregressively.netlify.com/tags/plot/</loc>
-      <priority>0</priority>
+      <loc>https://thinkregressively.netlify.com/post/journey/</loc>
     </url>
     
   
@@ -133,15 +132,6 @@
     
     <url>
     
-      <loc>https://thinkregressively.netlify.com/tags/regression/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://thinkregressively.netlify.com/tags/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
       <priority>0</priority>
@@ -155,14 +145,6 @@
       <loc>https://thinkregressively.netlify.com/</loc>
       <lastmod>2017-10-15T00:00:00-04:00</lastmod>
       <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://thinkregressively.netlify.com/post/journey/</loc>
     </url>
     
   
