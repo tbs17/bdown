@@ -1,7 +1,7 @@
 ---
 title: "My Journey to Data Science"
 author: "Tracy Shen"
-date: "July 2, 2018"
+date: 2018-07-01T 14:00
 output: html_document
 categories: ["R"]
 tags: ["R Markdown"]
@@ -11,7 +11,7 @@ tags: ["R Markdown"]
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-If you have viewed my bio, you probably noticed that I don't have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don't need a science or engineering background to become a data scientist! Here's my personal trajectory. I think it's highly reproducible:smile:
+If you have viewed my bio, you probably noticed that I don't have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don't need a science or engineering background to become a data scientist! Here's my personal trajectory. I think it's highly reproducible:)
 
 In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW's new adventure: IoT or we call it emerging platform projects. The mission of the position is to assist the team to build weather based algorithm to power digital health, smart home and connected car apps/widgets. To complete the mission, we need data scientists and I was tasked to research on everything about data scientist as a job. From there, I found the below:
 
@@ -23,7 +23,7 @@ These findings triggered 'Aha' moment for me: I WANT TO BE A DATA SCIENTIST! But
 
 The Johns Hopkins Data Science specailization not only taught me R but also opened the door to a programming and statistical world. From there, I got to know all these stellar statistians/data scientists such as my instructor Roger Peng, Brian Caffo, Jeff Leek. From there, I started to pay attention to data science related podcasts, such as 'Not So Standard Deviation(NSSD)'. From NSSD, I got to know Hilary Parker, a data scientist from StitchFix. From Roger Peng, I got to know 'Effort Report' a podcast that focuses on academia life. From NSSD,I got to know that Python is another major lanaguage that is acknlowledged unanimously among data science field. I then enrolled myself intot a 5-course python specialization taught by University of Michigan ['Applied Data Science in Python'](https://www.coursera.org/specializations/data-science-python).From there, I got to know a python focused podcast 'Data Skeptics'. For a very long time, NSSD and DS are the only two data science related podcasts that kept me company and inspired me and pulled me closer and closer to the data science field, although nowadays I subscribed to many other data science and machine learning podcasts(see the list at the end). Podcasts are great to keep up with the latest news in the field and listen to the past expeirence and successful stories of varieties of data scientists as well as the data science projects. 
 
-During this process, my title has changed from marketing research analyst to business intelligence analyst and to data scientist. Of course, taking online courses is not enough. I've also worked on a couple data science projects using R and Python at work. Some of them are statistical models such as logistic regression, regular regression with seasonality factors. Some of them are just data cleaning tasks which nowadays is a big part of data science, taking about 70-80% of data scientists' time. At the moment of writing this blog, I'm one month away from my PhD semester begins. Yes, the journey leads to another wonderful world and hopefully you will see another post about my data science experience in academia later :smile:. 
+During this process, my title has changed from marketing research analyst to business intelligence analyst and to data scientist. At the same time, I've also served as an editor to a R newsletter called [RWeekly](https://rweekly.org/) and the social media chair of [Forewards](http://forwards.github.io/) where R minority users get together to promote R user in under-represented groups.Of course, taking online courses is not enough. I've also worked on a couple data science projects using R and Python at work. Some of them are statistical models such as logistic regression, regular regression with seasonality factors. Some of them are just data cleaning tasks which nowadays is a big part of data science, taking about 70-80% of data scientists' time. At the moment of writing this blog, I'm one month away from my PhD semester begins. Yes, the journey leads to another wonderful world and hopefully you will see another post about my data science experience in academia later. 
 
 
 List of data science related podcast:
