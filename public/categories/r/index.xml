@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Think Regressively</title>
-    <link>https://thinkregressively.netlify.com/categories/r/</link>
+    <link>/categories/r/</link>
     <description>Recent content in R on Think Regressively</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://thinkregressively.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Journey to Data Science</title>
-      <link>https://thinkregressively.netlify.com/post/journey/</link>
+      <link>/post/journey/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/post/journey/</guid>
+      <guid>/post/journey/</guid>
       <description>If you have viewed my bio, you probably noticed that I don’t have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don’t need a science or engineering background to become a data scientist! Here’s my personal trajectory. I think it’s highly reproducible:)
 In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW’s new adventure: IoT or we call it emerging platform projects.</description>
     </item>

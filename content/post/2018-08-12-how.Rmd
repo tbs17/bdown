@@ -1,5 +1,5 @@
 ---
-title: How to run a tensorflow model in a non GPU supported computer
+title: Run a Tensorflow Model in a Non GPU Supported Computer
 author: Tracy Shen
 date: '2018-08-12'
 slug: tensforflow
@@ -11,4 +11,8 @@ draft: yes
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+Recently, I've been playing with the deep learning python package 'tensorflow'. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won't need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:
+
+### step 1  
 

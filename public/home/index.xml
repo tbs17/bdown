@@ -2,104 +2,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Think Regressively</title>
-    <link>https://thinkregressively.netlify.com/home/</link>
+    <link>/home/</link>
     <description>Recent content in Homes on Think Regressively</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://thinkregressively.netlify.com/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>You gain wisdom only when you look back, so think regressively more!</title>
-      <link>https://thinkregressively.netlify.com/home/hero/</link>
+      <link>/home/hero/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/hero/</guid>
+      <guid>/home/hero/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://thinkregressively.netlify.com/home/about/</link>
+      <link>/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/about/</guid>
+      <guid>/home/about/</guid>
       <description>BI/O Tracy Shen is a Data Scientist at AccuWeather Inc. and PhD candidate at Penn State University. Her work is focused on leveraging weather to predict loss or gain for business partners while her research interests include user susceptibility prediction to fake news, etc.</description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://thinkregressively.netlify.com/home/blog/</link>
+      <link>/home/blog/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/blog/</guid>
+      <guid>/home/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://thinkregressively.netlify.com/home/projects/</link>
+      <link>/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/projects/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>https://thinkregressively.netlify.com/home/teaching/</link>
+      <link>/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/teaching/</guid>
+      <guid>/home/teaching/</guid>
       <description>I am a teaching assistant for the following courses at Penn State University:
 TBD</description>
     </item>
     
     <item>
       <title>Selected Publications</title>
-      <link>https://thinkregressively.netlify.com/home/publications_selected/</link>
+      <link>/home/publications_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/publications_selected/</guid>
+      <guid>/home/publications_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>https://thinkregressively.netlify.com/home/publications/</link>
+      <link>/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/publications/</guid>
+      <guid>/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://thinkregressively.netlify.com/home/talks/</link>
+      <link>/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/talks/</guid>
+      <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tags</title>
-      <link>https://thinkregressively.netlify.com/home/tags/</link>
+      <link>/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/tags/</guid>
+      <guid>/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://thinkregressively.netlify.com/home/contact/</link>
+      <link>/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://thinkregressively.netlify.com/home/contact/</guid>
+      <guid>/home/contact/</guid>
       <description></description>
     </item>
     
