@@ -1,0 +1,10 @@
+---
+title: How to run a tensorflow model on non-GPU supported computer
+author: John Doe
+date: '2018-08-12'
+slug: how-to-run-a-tensorflow-model-on-non-gpu-supported-computer
+categories: []
+tags: []
+draft: yes
+---
+
