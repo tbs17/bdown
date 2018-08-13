@@ -1,0 +1,14 @@
+---
+title: How to run a tensorflow model in a non GPU supported computer
+author: Tracy Shen
+date: '2018-08-12'
+slug: tensforflow
+categories: ['deep learning']
+tags: ['tensorflow']
+draft: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
