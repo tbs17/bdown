@@ -16,7 +16,7 @@ Recently, I've been playing with the deep learning python package 'tensorflow'. 
 
 ### step 1: install tensorflow package into python
 
-I use Pycharm [Python IDE](https://www.jetbrains.com/pycharm/) to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the 'project interpreter' tab and click on '+' sign and search 'tensorflow' name and click 'install' button at the bottom. See below screenshot:![](/post/2018-08-12-how_files/install_tensorflow.JPG).
+I use Pycharm [Python IDE](https://www.jetbrains.com/pycharm/) to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the 'project interpreter' tab and click on '+' sign and search 'tensorflow' name and click 'install' button at the bottom. See below screenshot:![](/static/img/install_tensorflow.JPG)
 
 
 
