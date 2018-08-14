@@ -149,12 +149,12 @@ enableGitInfo = false
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
   highlight = true
-  #highlightjsVersion = "9.11.0"
-  #highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsVersion = "9.11.0"
+  highlightjsCDN = "//cdn.bootcss.com"
   highlight_languages = ['r','yaml','python']
   highlight_style = "github"
-  #MathJaxCDN = "//cdn.bootcss.com"
-  #MathJaxVersion = "2.7.1"
+  MathJaxCDN = "//cdn.bootcss.com"
+  MathJaxVersion = "2.7.1"
 
   # Enable native social sharing buttons?
   sharing = true
