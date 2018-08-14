@@ -2,31 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Think Regressively</title>
-    <link>/post/</link>
+    <link>https://thinkregressively.netlify.com/post/</link>
     <description>Recent content in Posts on Think Regressively</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://thinkregressively.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>How to run a tensorflow model in a non GPU supported computer</title>
-      <link>/post/tensforflow/</link>
-      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tensforflow/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>My Journey to Data Science</title>
-      <link>/post/journey/</link>
+      <link>https://thinkregressively.netlify.com/post/journey/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/journey/</guid>
+      <guid>https://thinkregressively.netlify.com/post/journey/</guid>
       <description>If you have viewed my bio, you probably noticed that I don’t have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don’t need a science or engineering background to become a data scientist! Here’s my personal trajectory. I think it’s highly reproducible:)
 In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW’s new adventure: IoT or we call it emerging platform projects.</description>
     </item>

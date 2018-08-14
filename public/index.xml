@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Think Regressively on Think Regressively</title>
-    <link>/</link>
+    <link>https://thinkregressively.netlify.com/</link>
     <description>Recent content in Think Regressively on Think Regressively</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,29 +11,20 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How to run a tensorflow model in a non GPU supported computer</title>
-      <link>/post/tensforflow/</link>
-      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tensforflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>User Susceptibility</title>
-      <link>/project/user_susceptibility/</link>
+      <link>https://thinkregressively.netlify.com/project/user_susceptibility/</link>
       <pubDate>Sun, 01 Jul 2018 10:00:00 -0400</pubDate>
       
-      <guid>/project/user_susceptibility/</guid>
+      <guid>https://thinkregressively.netlify.com/project/user_susceptibility/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My Journey to Data Science</title>
-      <link>/post/journey/</link>
+      <link>https://thinkregressively.netlify.com/post/journey/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/journey/</guid>
+      <guid>https://thinkregressively.netlify.com/post/journey/</guid>
       <description>&lt;p&gt;If you have viewed my bio, you probably noticed that I don’t have a science or engineering background, so how come I end up with data scientist? Well, it turns out that you don’t need a science or engineering background to become a data scientist! Here’s my personal trajectory. I think it’s highly reproducible:)&lt;/p&gt;
 &lt;p&gt;In Sep 2014, I was hired as a marketing research analyst by AccuWeather to work on AW’s new adventure: IoT or we call it emerging platform projects. The mission of the position is to assist the team to build weather based algorithm to power digital health, smart home and connected car apps/widgets. To complete the mission, we need data scientists and I was tasked to research on everything about data scientist as a job. From there, I found the below:&lt;/p&gt;
 &lt;ul&gt;
@@ -61,10 +52,10 @@
     
     <item>
       <title>SIA Career Panel</title>
-      <link>/talk/sia_talk/</link>
+      <link>https://thinkregressively.netlify.com/talk/sia_talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
-      <guid>/talk/sia_talk/</guid>
+      <guid>https://thinkregressively.netlify.com/talk/sia_talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>

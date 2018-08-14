@@ -14,5 +14,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Recently, I've been playing with the deep learning python package 'tensorflow'. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won't need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:
 
-### step 1  
+### step 1: install tensorflow package into python
+
+I use Pycharm [Python IDE](https://www.jetbrains.com/pycharm/) to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the 'project interpreter' tab and click on '+' sign and search 'tensorflow' name and click 'install' button at the bottom. See below screenshot:![](/post/2018-08-12-how_files/install_tensorflow.JPG).
+
+
+
+### step 2: load a clean data and split it for training and testing data using sklearn
+
+
+### step 3: build feature column and input function using tensorflow estimator API
+
+
+### step 4: predict target values using CPU processing patch
 
