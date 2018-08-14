@@ -23,7 +23,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;step-2-load-a-clean-data-and-split-it-for-training-and-testing-data-using-sklearn&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;step 2: load a clean data and split it for training and testing data using sklearn&lt;/h3&gt;
-&lt;p&gt;I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, `&lt;code&gt;{r}&#39;AVG_weedday4&#39;&lt;/code&gt;,‘AVG_weedday5’ and ‘ad_unit’ will become my 3 features in my simple tensorflow model.&lt;/p&gt;
+&lt;p&gt;I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, &lt;code&gt;&#39;AVG_weedday4&#39;, &#39;AVG_weedday5&#39; and &#39;ad_unit&#39;&lt;/code&gt; will become my 3 features in my simple tensorflow model.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;import pandas as pd
 ad_wx=pd.read_csv(&amp;#39;ad-wx.csv&amp;#39;)
 ad_wx[&amp;#39;AVG_weedday4&amp;#39;]=ad_wx[&amp;#39;AVG_weedday4&amp;#39;].astype(&amp;#39;int64&amp;#39;)

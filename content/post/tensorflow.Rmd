@@ -20,7 +20,7 @@ I use Pycharm- [a Python IDE](https://www.jetbrains.com/pycharm/) to install ten
 
 ### step 2: load a clean data and split it for training and testing data using sklearn
 
-I'm loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, ```{r}'AVG_weedday4'``,'AVG_weedday5' and 'ad_unit' will become my 3 features in my simple tensorflow model. 
+I'm loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, ```'AVG_weedday4', 'AVG_weedday5' and 'ad_unit'``` will become my 3 features in my simple tensorflow model. 
 
 ```{python eval=FALSE}
 import pandas as pd

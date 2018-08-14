@@ -359,7 +359,7 @@
 </div>
 <div id="step-2-load-a-clean-data-and-split-it-for-training-and-testing-data-using-sklearn" class="section level3">
 <h3>step 2: load a clean data and split it for training and testing data using sklearn</h3>
-<p>I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, `<code>{r}'AVG_weedday4'</code>,‘AVG_weedday5’ and ‘ad_unit’ will become my 3 features in my simple tensorflow model.</p>
+<p>I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, <code>'AVG_weedday4', 'AVG_weedday5' and 'ad_unit'</code> will become my 3 features in my simple tensorflow model.</p>
 <pre class="python"><code>import pandas as pd
 ad_wx=pd.read_csv(&#39;ad-wx.csv&#39;)
 ad_wx[&#39;AVG_weedday4&#39;]=ad_wx[&#39;AVG_weedday4&#39;].astype(&#39;int64&#39;)
