@@ -12,26 +12,26 @@ tags: ['tensorflow']
 
 <p>Recently, I’ve been playing with the deep learning python package ‘tensorflow’. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won’t need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:</p>
 <div id="step-1-install-tensorflow-package-into-python" class="section level3">
-<h3>step 1: install tensorflow package into python</h3>
+<h3>step 1: install <code>tensorflow</code> package into python</h3>
 <p>I use Pycharm- <a href="https://www.jetbrains.com/pycharm/">a Python IDE</a> to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the ‘project interpreter’ tab and click on ‘+’ sign and search ‘tensorflow’ name and click ‘install’ button at the bottom. See below screenshot:<img src="/static/img/install_tensorflow.JPG" /></p>
 </div>
 <div id="step-2-load-a-clean-data-and-split-it-for-training-and-testing-data-using-sklearn" class="section level3">
-<h3>step 2: load a clean data and split it for training and testing data using sklearn</h3>
+<h3>step 2: load a clean data and split it for training and testing data using <code>sklearn</code></h3>
 <p>I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, <code>'AVG_weedday4', 'AVG_weedday5' and 'ad_unit'</code> will become my 3 features in my simple tensorflow model.</p>
 <pre class="python"><code>import pandas as pd
 ad_wx=pd.read_csv(&#39;ad-wx.csv&#39;)
 ad_wx[&#39;AVG_weedday4&#39;]=ad_wx[&#39;AVG_weedday4&#39;].astype(&#39;int64&#39;)
 ad_wx[&#39;AVG_weedday5&#39;]=ad_wx[&#39;AVG_weedday5&#39;].astype(&#39;int64&#39;)
 ad_wx[&#39;ad_unit&#39;]=ad_wx[&#39;ad_unit&#39;].astype(&#39;str&#39;)</code></pre>
-<p>Next, I use sklearn.model_selection to split the data into training and testing dataset with testing dataset to be 30% of total data. clicks/impression is my target variable or predicting variable.</p>
+<p>Next, I use sklearn.model_selection to split the data into training and testing dataset with testing dataset to be 30% of total data. <code>clicks/impression</code> is my target variable or predicting variable.</p>
 <pre class="python"><code>from sklearn.model_selection import train_test_split
 x_data=ad_wx.drop(&#39;clicks/impression&#39;,axis=1)
 y_data=ad_wx[&#39;clicks/impression&#39;]
 X_train,X_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,random_state=100)</code></pre>
 </div>
 <div id="step-3-build-feature-column-and-input-function-using-tensorflow-estimator-api" class="section level3">
-<h3>step 3: build feature column and input function using tensorflow estimator API</h3>
-<p>After we had training and testing data, we are ready to run the tensorflow model. To build a model in Tensorflow, we basically need to build a feature column list and input function to train the model. For features to be tensorflow ready, we need to convert them into the datatype that tensorflow can recognize. There are two functions that are commonly used to convert features. categorical_column_with_has_bucket() and numeric_column() are used to convert catgorical variable to tensorflow ready feature as well as numeric variables. Once done, you can throw them into a list.</p>
+<h3>step 3: build feature column and input function using <code>tensorflow estimator API</code></h3>
+<p>After we had training and testing data, we are ready to run the tensorflow model. To build a model in Tensorflow, we basically need to build a <code>feature column</code> list and <code>input function</code> to train the model. For features to be tensorflow ready, we need to convert them into the datatype that tensorflow can recognize. There are two functions that are commonly used to convert features. <code>categorical_column_with_has_bucket()</code> and <code>numeric_column()</code> are used to convert catgorical variable to tensorflow ready feature as well as numeric variables. Once done, you can throw them into a list.</p>
 <p>Regarding input function, you use your training data to train that input function by batch loadin them (see batch_size argument below) and iterate for n times (see num_epochs argument) with shuffling.</p>
 <pre class="python"><code>import tensorflow as tf
 ad_unit=tf.feature_column.categorical_column_with_hash_bucket(&#39;ad_unit&#39;,hash_bucket_size=1000)
@@ -42,7 +42,7 @@ input_func=tf.estimator.inputs.pandas_input_fn(x=X_train,y=y_train,batch_size=10
 </div>
 <div id="step-4-predict-target-values-using-cpu-processing-patch" class="section level3">
 <h3>step 4: predict target values using CPU processing patch</h3>
-<p>After you are done with building the essential parts for the model, you can then build the model and train the data. After the model is built and trained, then you can use a prediction function to predict the target variables. prediction function is basically an input function that uses testing data. You use model.predict() to predict values. The output predicted numbers initially is a dictionary. You will need to convert it to a list so that you can extract the predicted value. After that’s done, you can write it out using numpy’s savetxt() function.</p>
+<p>After you are done with building the essential parts for the model, you can then build the model and train the data. After the model is built and trained, then you can use a prediction function to predict the target variables. prediction function is basically an input function that uses testing data. You use <code>model.predict()</code> to predict values. The output predicted numbers initially is a dictionary. You will need to convert it to a list so that you can extract the predicted value. After that’s done, you can write it out using numpy’s <code>savetxt()</code> function.</p>
 <pre class="python"><code>model=tf.estimator.LinearRegressor(feature_columns=feat_col)
 model.train(input_fn=input_func,steps=500)
 pred_fn=tf.estimator.inputs.pandas_input_fn(x=X_test,batch_size=len(X_test),num_epochs=100,shuffle=False)
@@ -57,8 +57,8 @@ np.savetxt(&#39;tf_predictions.csv&#39;,final_preds,delimiter=&#39;,&#39;)</code
 <p>When you run your model, you will see the below error message:</p>
 <pre class="python"><code>2018-07-13 09:01:33.900329: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
 </code></pre>
-<p>So the solution is to update the tensorflow binary for your CPU &amp; OS using a wheel file. To install, use the below command in your command line prompt:</p>
-<p><em>pip install –ignore-installed –upgrade ‘Download whl file’ </em></p>
+<p>So the solution is to update the tensorflow binary for your CPU &amp; OS using a wheel file. To install, use the below command in your <code>command line prompt</code>:</p>
+<p><code>pip install --ignore-installed --upgrade 'Download whl file'</code></p>
 <p>The download url of the whl file can be found <a href="https://github.com/lakshayg/tensorflow-build">here</a>. For windows, you will want to use <a href="https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.8.0/py36/CPU/avx2">this wheel file</a></p>
 <p>After you download it, save it under your default command line directory. Mine is C:.shen and install it into your machine. Then you are good to go.</p>
 </div>

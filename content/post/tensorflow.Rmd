@@ -12,13 +12,13 @@ tags: ['tensorflow']
 
 Recently, I've been playing with the deep learning python package 'tensorflow'. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won't need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:
 
-### step 1: install tensorflow package into python
+### step 1: install ```tensorflow``` package into python
 
 I use Pycharm- [a Python IDE](https://www.jetbrains.com/pycharm/) to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the 'project interpreter' tab and click on '+' sign and search 'tensorflow' name and click 'install' button at the bottom. See below screenshot:![](/static/img/install_tensorflow.JPG)
 
 
 
-### step 2: load a clean data and split it for training and testing data using sklearn
+### step 2: load a clean data and split it for training and testing data using ```sklearn```
 
 I'm loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, ```'AVG_weedday4', 'AVG_weedday5' and 'ad_unit'``` will become my 3 features in my simple tensorflow model. 
 
@@ -31,7 +31,7 @@ ad_wx['AVG_weedday5']=ad_wx['AVG_weedday5'].astype('int64')
 ad_wx['ad_unit']=ad_wx['ad_unit'].astype('str')
 
 ```
-Next, I use sklearn.model_selection to split the data into training and testing dataset with testing dataset to be 30% of total data. clicks/impression is my target variable or predicting variable. 
+Next, I use sklearn.model_selection to split the data into training and testing dataset with testing dataset to be 30% of total data. ```clicks/impression``` is my target variable or predicting variable. 
 
 ```{python eval=FALSE}
 from sklearn.model_selection import train_test_split
@@ -43,9 +43,9 @@ X_train,X_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,rando
 
 ```
 
-### step 3: build feature column and input function using tensorflow estimator API
+### step 3: build feature column and input function using ```tensorflow estimator API```
 
-After we had training and testing data, we are ready to run the tensorflow model. To build a model in Tensorflow, we basically need to build a feature column list and input function to train the model. For features to be tensorflow ready, we need to convert them into the datatype that tensorflow can recognize. There are two functions that are commonly used to convert features. categorical_column_with_has_bucket() and numeric_column() are used to convert catgorical variable to tensorflow ready feature as well as numeric variables. Once done, you can throw them into a list. 
+After we had training and testing data, we are ready to run the tensorflow model. To build a model in Tensorflow, we basically need to build a ```feature column``` list and ```input function``` to train the model. For features to be tensorflow ready, we need to convert them into the datatype that tensorflow can recognize. There are two functions that are commonly used to convert features. ```categorical_column_with_has_bucket()``` and ```numeric_column()``` are used to convert catgorical variable to tensorflow ready feature as well as numeric variables. Once done, you can throw them into a list. 
 
 Regarding input function, you use your training data to train that input function by batch loadin them (see batch_size argument below) and iterate for  n times (see num_epochs argument) with shuffling.
 
@@ -62,7 +62,7 @@ input_func=tf.estimator.inputs.pandas_input_fn(x=X_train,y=y_train,batch_size=10
 
 ### step 4: predict target values using CPU processing patch
 
-After you are done with building the essential parts for the model, you can then build the model and train the data. After the model is built and trained, then you can use a prediction function to predict the target variables. prediction function is basically an input function that uses testing data. You use model.predict() to predict values. The output predicted numbers initially is a dictionary. You will need to convert it to a list so that you can extract the predicted value. After that's done, you can write it out using numpy's savetxt() function. 
+After you are done with building the essential parts for the model, you can then build the model and train the data. After the model is built and trained, then you can use a prediction function to predict the target variables. prediction function is basically an input function that uses testing data. You use ```model.predict()``` to predict values. The output predicted numbers initially is a dictionary. You will need to convert it to a list so that you can extract the predicted value. After that's done, you can write it out using numpy's ```savetxt()``` function. 
 
 ```{python eval=FALSE}
 model=tf.estimator.LinearRegressor(feature_columns=feat_col)
@@ -87,9 +87,9 @@ When you run your model, you will see the below error message:
 
 ```
 
-So the solution is to update the tensorflow binary for your CPU & OS using a wheel file. To install, use the below command in your command line prompt: 
+So the solution is to update the tensorflow binary for your CPU & OS using a wheel file. To install, use the below command in your ```command line prompt```: 
 
-*pip install --ignore-installed --upgrade 'Download whl file' *
+```pip install --ignore-installed --upgrade 'Download whl file' ```
 
 
 
