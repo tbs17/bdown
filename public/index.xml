@@ -11,6 +11,36 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Run a Tensorflow Model in a Non GPU Supported Computer</title>
+      <link>https://thinkregressively.netlify.com/post/tensforflow/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/post/tensforflow/</guid>
+      <description>&lt;p&gt;Recently, I’ve been playing with the deep learning python package ‘tensorflow’. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won’t need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:&lt;/p&gt;
+&lt;div id=&#34;step-1-install-tensorflow-package-into-python&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;step 1: install tensorflow package into python&lt;/h3&gt;
+&lt;p&gt;I use Pycharm- &lt;a href=&#34;https://www.jetbrains.com/pycharm/&#34;&gt;a Python IDE&lt;/a&gt; to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the ‘project interpreter’ tab and click on ‘+’ sign and search ‘tensorflow’ name and click ‘install’ button at the bottom. See below screenshot:&lt;img src=&#34;https://thinkregressively.netlify.com/static/img/install_tensorflow.JPG&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-load-a-clean-data-and-split-it-for-training-and-testing-data-using-sklearn&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;step 2: load a clean data and split it for training and testing data using sklearn&lt;/h3&gt;
+&lt;p&gt;I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, ‘AVG_weedday4’,‘AVG_weedday5’ and ‘ad_unit’ will become my 3 features in my simple tensorflow model.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;import pandas as pd
+ad_wx=pd.read_csv(&amp;#39;ad-wx.csv&amp;#39;)
+ad_wx[&amp;#39;AVG_weedday4&amp;#39;]=ad_wx[&amp;#39;AVG_weedday4&amp;#39;].astype(&amp;#39;int64&amp;#39;)
+ad_wx[&amp;#39;AVG_weedday5&amp;#39;]=ad_wx[&amp;#39;AVG_weedday5&amp;#39;].astype(&amp;#39;int64&amp;#39;)
+# ad_wx[&amp;#39;clicks/impression&amp;#39;]=ad_wx[&amp;#39;clicks/impression&amp;#39;].astype(&amp;#39;int64&amp;#39;)
+ad_wx[&amp;#39;ad_unit&amp;#39;]=ad_wx[&amp;#39;ad_unit&amp;#39;].astype(&amp;#39;str&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-build-feature-column-and-input-function-using-tensorflow-estimator-api&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;step 3: build feature column and input function using tensorflow estimator API&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4-predict-target-values-using-cpu-processing-patch&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;step 4: predict target values using CPU processing patch&lt;/h3&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>User Susceptibility</title>
       <link>https://thinkregressively.netlify.com/project/user_susceptibility/</link>
       <pubDate>Sun, 01 Jul 2018 10:00:00 -0400</pubDate>

@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://thinkregressively.netlify.com/post/tensforflow/</loc>
+      <lastmod>2018-08-12T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://thinkregressively.netlify.com/project/user_susceptibility/</loc>
       <lastmod>2018-07-01T10:00:00-04:00</lastmod>
     </url>
@@ -77,6 +86,16 @@
     
     <url>
     
+      <loc>https://thinkregressively.netlify.com/categories/deep-learning/</loc>
+      <lastmod>2018-08-12T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://thinkregressively.netlify.com/tags/machine-learning/</loc>
       <lastmod>2018-07-01T10:00:00-04:00</lastmod>
       <priority>0</priority>
@@ -128,6 +147,16 @@
     
       <loc>https://thinkregressively.netlify.com/tags/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://thinkregressively.netlify.com/tags/tensorflow/</loc>
+      <lastmod>2018-08-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
