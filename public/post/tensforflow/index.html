@@ -280,7 +280,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -399,6 +399,10 @@ np.savetxt(&#39;tf_predictions.csv&#39;,final_preds,delimiter=&#39;,&#39;)</code
 <p>When you run your model, you will see the below error message:</p>
 <pre class="python"><code>2018-07-13 09:01:33.900329: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
 </code></pre>
+<p>So the solution is to update the tensorflow binary for your CPU &amp; OS using a wheel file. To install, use the below command in your command line prompt:</p>
+<p><em>pip install –ignore-installed –upgrade ‘Download whl file’ </em></p>
+<p>The download url of the whl file can be found <a href="https://github.com/lakshayg/tensorflow-build">here</a>. For windows, you will want to use <a href="https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.8.0/py36/CPU/avx2">this wheel file</a></p>
+<p>After you download it, save it under your default command line directory. Mine is C:.shen and install it into your machine. Then you are good to <a href="go:-" class="uri">go:-</a>).</p>
 </div>
 
     </div>

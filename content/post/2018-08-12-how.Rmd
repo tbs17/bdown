@@ -7,6 +7,12 @@ categories: ['deep learning']
 tags: ['tensorflow']
 
 ---
+```{r setup, include=FALSE,eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, 
+                      results='show', cache=TRUE, autodep=FALSE)
+knitr::opts_knit$set(progress = TRUE, verbose = TRUE)
+knitr::knit_engines$set(python = reticulate::eng_python)
+```
 
 
 Recently, I've been playing with the deep learning python package 'tensorflow'. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won't need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:
@@ -85,3 +91,13 @@ When you run your model, you will see the below error message:
 2018-07-13 09:01:33.900329: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
 
 ```
+
+So the solution is to update the tensorflow binary for your CPU & OS using a wheel file. To install, use the below command in your command line prompt: 
+
+*pip install --ignore-installed --upgrade 'Download whl file' *
+
+
+
+The download url of the whl file can be found [here](https://github.com/lakshayg/tensorflow-build). For windows, you will want to use [this wheel file](https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.8.0/py36/CPU/avx2)
+
+After you download it, save it under your default command line directory. Mine is C:\Users\tracy.shen and install it into your machine. Then you are good to go:-).  
