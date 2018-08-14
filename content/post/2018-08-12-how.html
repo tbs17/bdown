@@ -22,12 +22,39 @@ tags: ['tensorflow']
 ad_wx=pd.read_csv(&#39;ad-wx.csv&#39;)
 ad_wx[&#39;AVG_weedday4&#39;]=ad_wx[&#39;AVG_weedday4&#39;].astype(&#39;int64&#39;)
 ad_wx[&#39;AVG_weedday5&#39;]=ad_wx[&#39;AVG_weedday5&#39;].astype(&#39;int64&#39;)
-# ad_wx[&#39;clicks/impression&#39;]=ad_wx[&#39;clicks/impression&#39;].astype(&#39;int64&#39;)
 ad_wx[&#39;ad_unit&#39;]=ad_wx[&#39;ad_unit&#39;].astype(&#39;str&#39;)</code></pre>
+<p>Next, I use sklearn.model_selection to split the data into training and testing dataset with testing dataset to be 30% of total data. clicks/impression is my target variable or predicting variable.</p>
+<pre class="python"><code>from sklearn.model_selection import train_test_split
+x_data=ad_wx.drop(&#39;clicks/impression&#39;,axis=1)
+y_data=ad_wx[&#39;clicks/impression&#39;]
+X_train,X_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,random_state=100)</code></pre>
 </div>
 <div id="step-3-build-feature-column-and-input-function-using-tensorflow-estimator-api" class="section level3">
 <h3>step 3: build feature column and input function using tensorflow estimator API</h3>
+<p>After we had training and testing data, we are ready to run the tensorflow model. To build a model in Tensorflow, we basically need to build a feature column list and input function to train the model. For features to be tensorflow ready, we need to convert them into the datatype that tensorflow can recognize. There are two functions that are commonly used to convert features. categorical_column_with_has_bucket() and numeric_column() are used to convert catgorical variable to tensorflow ready feature as well as numeric variables. Once done, you can throw them into a list.</p>
+<p>Regarding input function, you use your training data to train that input function by batch loadin them (see batch_size argument below) and iterate for n times (see num_epochs argument) with shuffling.</p>
+<pre class="python"><code>import tensorflow as tf
+ad_unit=tf.feature_column.categorical_column_with_hash_bucket(&#39;ad_unit&#39;,hash_bucket_size=1000)
+weed4=tf.feature_column.numeric_column(&#39;AVG_weedday4&#39;)
+weed5=tf.feature_column.numeric_column(&#39;AVG_weedday5&#39;)
+feat_col=[ad_unit,weed4,weed5]
+input_func=tf.estimator.inputs.pandas_input_fn(x=X_train,y=y_train,batch_size=10,num_epochs=100,shuffle=True)</code></pre>
 </div>
 <div id="step-4-predict-target-values-using-cpu-processing-patch" class="section level3">
 <h3>step 4: predict target values using CPU processing patch</h3>
+<p>After you are done with building the essential parts for the model, you can then build the model and train the data. After the model is built and trained, then you can use a prediction function to predict the target variables. prediction function is basically an input function that uses testing data. You use model.predict() to predict values. The output predicted numbers initially is a dictionary. You will need to convert it to a list so that you can extract the predicted value. After that’s done, you can write it out using numpy’s savetxt() function.</p>
+<pre class="python"><code>model=tf.estimator.LinearRegressor(feature_columns=feat_col)
+model.train(input_fn=input_func,steps=500)
+pred_fn=tf.estimator.inputs.pandas_input_fn(x=X_test,batch_size=len(X_test),num_epochs=100,shuffle=False)
+predictions=list(model.predict(input_fn=pred_fn))
+final_preds=[]
+for pred in predictions:
+    final_preds.append(pred[&#39;predictions&#39;][0])
+    
+import numpy as np
+np.savetxt(&#39;tf_predictions.csv&#39;,final_preds,delimiter=&#39;,&#39;)</code></pre>
+<p>All the above steps are easy and simple except for the last part.To get the tensorflow model trained and render the predicted number, you usually need a GPU supported computer to run. However, there’s a work-around way for you to just use CPU computer to finish running the model.</p>
+<p>When you run your model, you will see the below error message:</p>
+<pre class="python"><code>2018-07-13 09:01:33.900329: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+</code></pre>
 </div>
