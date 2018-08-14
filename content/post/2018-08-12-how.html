@@ -13,10 +13,17 @@ draft: yes
 <p>Recently, I’ve been playing with the deep learning python package ‘tensorflow’. I ran a simple linear regression model and had some success. Tensorflow is great with unstructured data and image recognization problem. Therefore, it usually runs better in a GPU supported computer. However, given my model is rather simple and won’t need to rely on too much image processing power like GPU. I did it on my windows 7 professional/10 machine and it predicted some values for me. Below are the detailed walk-throughs:</p>
 <div id="step-1-install-tensorflow-package-into-python" class="section level3">
 <h3>step 1: install tensorflow package into python</h3>
-<p>I use Pycharm <a href="https://www.jetbrains.com/pycharm/">Python IDE</a> to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the ‘project interpreter’ tab and click on ‘+’ sign and search ‘tensorflow’ name and click ‘install’ button at the bottom. See below screenshot:<img src="/static/img/install_tensorflow.JPG" /></p>
+<p>I use Pycharm- <a href="https://www.jetbrains.com/pycharm/">a Python IDE</a> to install tensforflow which is really easy. Go to the settings of Pycharm and navigate to the ‘project interpreter’ tab and click on ‘+’ sign and search ‘tensorflow’ name and click ‘install’ button at the bottom. See below screenshot:<img src="/static/img/install_tensorflow.JPG" /></p>
 </div>
 <div id="step-2-load-a-clean-data-and-split-it-for-training-and-testing-data-using-sklearn" class="section level3">
 <h3>step 2: load a clean data and split it for training and testing data using sklearn</h3>
+<p>I’m loading a sample data set called ad_wx and convert some of my columns(feature candidates) to numeric data type for better building features for tensorflow. And you guessed it, ‘AVG_weedday4’,‘AVG_weedday5’ and ‘ad_unit’ will become my 3 features in my simple tensorflow model.</p>
+<pre class="python"><code>import pandas as pd
+ad_wx=pd.read_csv(&#39;ad-wx.csv&#39;)
+ad_wx[&#39;AVG_weedday4&#39;]=ad_wx[&#39;AVG_weedday4&#39;].astype(&#39;int64&#39;)
+ad_wx[&#39;AVG_weedday5&#39;]=ad_wx[&#39;AVG_weedday5&#39;].astype(&#39;int64&#39;)
+# ad_wx[&#39;clicks/impression&#39;]=ad_wx[&#39;clicks/impression&#39;].astype(&#39;int64&#39;)
+ad_wx[&#39;ad_unit&#39;]=ad_wx[&#39;ad_unit&#39;].astype(&#39;str&#39;)</code></pre>
 </div>
 <div id="step-3-build-feature-column-and-input-function-using-tensorflow-estimator-api" class="section level3">
 <h3>step 3: build feature column and input function using tensorflow estimator API</h3>
