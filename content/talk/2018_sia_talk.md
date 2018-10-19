@@ -1,9 +1,9 @@
 +++
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+date = 2018-10-18T00:00:00  # Schedule page publish date.
 
-title = "SIA Career Panel"
-time_start = 2016-08-26T14:00:00
-time_end = 2016-08-26T15:30:00
+title = "2018 SIA Career Panel"
+time_start = 2018-10-19T13:00:00
+time_end = 2018-10-19T14:30:00
 abstract = ""
 abstract_short = ""
 event = "Alumni Career Talk"
@@ -39,4 +39,4 @@ caption = "I'm the only lady :smile:"
 
 +++
 
-
+Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/post/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
