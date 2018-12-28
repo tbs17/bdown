@@ -66,7 +66,7 @@ np.savetxt(&amp;#39;tf_predictions.csv&amp;#39;,final_preds,delimiter=&amp;#39;,
 &lt;p&gt;So the solution is to update the tensorflow binary for your CPU &amp;amp; OS using a wheel file. To install, use the below command in your &lt;code&gt;command line prompt&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pip install --ignore-installed --upgrade &#39;Download whl file&#39;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The download url of the whl file can be found &lt;a href=&#34;https://github.com/lakshayg/tensorflow-build&#34;&gt;here&lt;/a&gt;. For windows, you will want to use &lt;a href=&#34;https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.8.0/py36/CPU/avx2&#34;&gt;this wheel file&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;After you download it, save it under your default command line directory. Mine is C:.shen and install it into your machine. Then you are good to go.&lt;/p&gt;
+&lt;p&gt;After you download it, save it under your default command line directory. Mine is ‘C:.shen’ and install it into your machine. Then you are good to go.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -117,8 +117,7 @@ np.savetxt(&amp;#39;tf_predictions.csv&amp;#39;,final_preds,delimiter=&amp;#39;,
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>https://thinkregressively.netlify.com/talk/sia_talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>
