@@ -1,8 +1,3 @@
----
-title: "Cssa_talk_2018"
-date: 2018-12-28T12:38:31-05:00
-draft: true
----
 
 +++
 date = 2018-12-27T00:00:00  # Schedule page publish date.
