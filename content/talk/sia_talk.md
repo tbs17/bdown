@@ -1,7 +1,7 @@
 +++
 date = 2017-01-01T00:00:00  # Schedule page publish date.
 
-title = "SIA Career Panel"
+title = "2016 SIA Career Panel"
 time_start = 2016-08-26T14:00:00
 time_end = 2016-08-26T15:30:00
 abstract = ""
