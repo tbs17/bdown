@@ -17,4 +17,5 @@ weight = 30
 
 I am a teaching assistant for the following courses at Penn State University:
 
-TBD
+SRA468:Spatial Analysis of Risk: Tue&Thr 3:05-4:20pm EST, Office Hour: 1:30-2:30pm Wed Fall 2018 
+D220:Data Management-Data Science: Mon&Wed 6-7:30pm EST, Office Hour: 2:30-4:30pm Tue Spring 2019
