@@ -396,7 +396,7 @@ import pandas_gbq
 
 sql=&quot;&quot;&quot;
 select *
-FROM `dfp-log-data.DFPdata.Tracy_NYC_365DAY_IMPS`
+FROM `yourproject.yourtable`
 &quot;&quot;&quot;
 # make sure the json file is saved under the same directory of this script
 df=pandas_gbq.read_gbq(query=sql,project_id=&#39;xxx&#39;,private_key=&#39;xxx.json&#39;,dialect=&#39;standard&#39;)
