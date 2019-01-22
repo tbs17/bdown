@@ -11,7 +11,78 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>SIA Career Panel</title>
+      <title>How to Query from Google BigQuery and Azure SQL Database at the same time in Python</title>
+      <link>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</link>
+      <pubDate>Mon, 21 Jan 2019 21:32:20 -0500</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</guid>
+      <description>&lt;p&gt;Google BigQuery and Azure Cloud are both powerful platforms to store data. Google BigQuery can process a couple TB of data within a couple minutes and you pay when you query, store and process. The detailed pricing is &lt;a href=&#34;https://cloud.google.com/bigquery/pricing&#34;&gt;here&lt;/a&gt;.Azure SQL data base provides fast and convienient data for the first 32 GB/month at ~$5/month. The detailed pricing is &lt;a href=&#34;https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/&#34;&gt;here&lt;/a&gt;.Normally business intelligence analysts, database managers or data scientists access the two platforms from the two consoles separately. This leads to that data are scattered and have to be read into a central programming IDE such as RStudio and PyCharm. This post will introduce some quick and dirty way to query data from both Azure database and Google Bigquery in Python using packages that are developed for this purpose.&lt;/p&gt;
+&lt;div id=&#34;connect-to-azure-database-using-pyodbc-package&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Connect to Azure Database using Pyodbc package&lt;/h3&gt;
+&lt;p&gt;To query data from Azure SQL database, we will use the package &lt;code&gt;&#39;pyodbc&#39;&lt;/code&gt; to connect to the Azure database via the necessary database engine credential.Below I’m taking an example of querying some weather data from an established azure database. The main function we will use is &lt;code&gt;pyodbc.connect()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;import os
+import pyodbc
+import pandas as pd
+
+server = &amp;#39;server name&amp;#39;
+database = &amp;#39;database name&amp;#39;
+username = &amp;#39;your user name&amp;#39;
+password = &amp;#39;your password&amp;#39;
+driver= &amp;#39;{ODBC Driver 13 for SQL Server}&amp;#39;
+
+cnxn = pyodbc.connect(&amp;#39;DRIVER=&amp;#39;+driver+&amp;#39;;SERVER=&amp;#39;+server+&amp;#39;;PORT=1433;DATABASE=&amp;#39;+database+&amp;#39;;UID=&amp;#39;+username+&amp;#39;;PWD=&amp;#39;+ password)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After connecting to the database, if we want to get temperature and precipitation data for the time frame 2017-08-01 to 2018-07-31, we then use the below query and use the function from &lt;code&gt;pandas&lt;/code&gt; package &lt;code&gt;pd.read_sql()&lt;/code&gt; to convert the data into pandas readable data frame.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;sql1=&amp;#39;&amp;#39;&amp;#39;
+    SELECT
+[StationID] AS station_id,
+[ObservationDate] AS date,
+TEMPERATURE_Average AS temp_avg,
+TEMPERATURE_Maximum AS temp_max,
+TEMPERATURE_Minimum AS temp_min,
+[PRECIPITATION_Minimum] AS precip_min,
+[PRECIPITATION_Maximum] AS precip_max,
+[PRECIPITATION_Average] AS precip_avg,
+[TOTAL_DAILY_WATER_EQUIVALENT] AS tot_water
+FROM [Aggregated].[StationData_Daily]
+WHERE [ObservationDate]&amp;gt;=&amp;#39;2017-08-01&amp;#39; AND [ObservationDate]&amp;lt;&amp;#39;2018-07-31&amp;#39;
+AND [StationID] IN (45956,31921,62138)
+    &amp;#39;&amp;#39;&amp;#39;
+temp_precip1=pd.read_sql(sql1,cnxn)
+temp_precip1.head(10)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pulling-data-from-google-bigquery&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pulling data from google bigquery&lt;/h3&gt;
+&lt;p&gt;Once you have some temperature and precip data from Azure database, you would want to connect to the Google BigQuery console to download some data from there. In order to do that, we need to install the Python package called &lt;code&gt;&#39;pandas-gbq&#39;&lt;/code&gt; and &lt;code&gt;&#39;google.cloud&#39;&lt;/code&gt;. Additionally, you would need your project credential information from Google BigQuery(BQ) since everything on BQ is project based and you will also need a private_key which you could only obtain if you have admin access. The private key is a &lt;code&gt;json&lt;/code&gt; file which you would need to save under the same directory when connecting to BQ in Python. Please see below code.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+from google.cloud import bigquery
+import pandas_gbq
+
+sql=&amp;quot;&amp;quot;&amp;quot;
+select *
+FROM `dfp-log-data.DFPdata.Tracy_NYC_365DAY_IMPS`
+&amp;quot;&amp;quot;&amp;quot;
+# make sure the json file is saved under the same directory of this script
+df=pandas_gbq.read_gbq(query=sql,project_id=&amp;#39;xxx&amp;#39;,private_key=&amp;#39;xxx.json&amp;#39;,dialect=&amp;#39;standard&amp;#39;)
+df.head(10)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connecting to BQ is even easier as it has combined the pandas data frame converting together with the reading bigquery by using a function called &lt;code&gt;pandas_gbq.read_gbq&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Once you have both of the data, you can merge them together and do further analysis on it. There you have it. It is not as difficult as you think. Therefore, there’s no need to put the data from two platforms together and enjoy the benefits of the two platforms at the same time.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2018 CSSA Grad School Application Seminar</title>
+      <link>https://thinkregressively.netlify.com/talk/cssa_talk_2018/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/talk/cssa_talk_2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2018 SIA Career Panel</title>
       <link>https://thinkregressively.netlify.com/talk/sia_2018/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 -0500</pubDate>
       
@@ -121,7 +192,7 @@ np.savetxt(&amp;#39;tf_predictions.csv&amp;#39;,final_preds,delimiter=&amp;#39;,
     </item>
     
     <item>
-      <title>SIA Career Panel</title>
+      <title>2016 SIA Career Panel</title>
       <link>https://thinkregressively.netlify.com/talk/sia_talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       

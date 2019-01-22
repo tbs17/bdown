@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on Think Regressively</title>
+    <link>https://thinkregressively.netlify.com/categories/sql/</link>
+    <description>Recent content in SQL on Think Regressively</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 21 Jan 2019 21:32:20 -0500</lastBuildDate>
+    
+	<atom:link href="https://thinkregressively.netlify.com/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Query from Google BigQuery and Azure SQL Database at the same time in Python</title>
+      <link>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</link>
+      <pubDate>Mon, 21 Jan 2019 21:32:20 -0500</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</guid>
+      <description>Google BigQuery and Azure Cloud are both powerful platforms to store data. Google BigQuery can process a couple TB of data within a couple minutes and you pay when you query, store and process. The detailed pricing is here.Azure SQL data base provides fast and convienient data for the first 32 GB/month at ~$5/month. The detailed pricing is here.Normally business intelligence analysts, database managers or data scientists access the two platforms from the two consoles separately.</description>
+    </item>
+    
+  </channel>
+</rss>
