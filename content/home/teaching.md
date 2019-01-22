@@ -25,4 +25,4 @@ I am a teaching assistant for the following courses at Penn State University:
 **DS220:Data Management-Data Science-Spring 2019**: 
 
 + **Time**: Mon&Wed 6-7:30pm EST 
-+ **Office Hour**: Tue 2:30-4:30pm EST  
++ **Office Hour**: Tue 3-5pm EST  
