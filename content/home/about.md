@@ -37,6 +37,6 @@ weight = 5
 
 # BI/O
 
-Tracy Shen is a Data Scientist at AccuWeather Inc. and PhD candidate at Penn State University. Her work is focused on leveraging weather to predict loss or gain for business partners while her research interests include user susceptibility prediction to fake news, etc. 
+Tracy Shen is currently a Data Scientist at AccuWeather and PhD candidate for machine learning at Penn State University. She is also a research assistant at the Computational and Spatial Analysis Core of the Population Research Center(Nation's top 3) at Penn State. There she manages 4TB geotagged twitter database and provides twitter analysis for the university grant writing leveraging Pittsburgh Super Computer Center and Hadoop and Spark environments. Her research interest is in computational social science utilizing machine learning, natural language processing and network analysis methodology. She's affiliated to PIKE lab at the School of Information Sciences and Technology at Penn State, working on the SysFake project to detect fake news user susceptibility. Please see her full CV [here] (https://thinkregressively.netlify.com/Tracy_Resume_Jan2019).
 
 
