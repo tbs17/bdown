@@ -37,19 +37,19 @@ selected = true
 projects = ["user_susceptibility.md"]
 
 # Links (optional).
-url_pdf = "http://delivery.acm.org/10.1145/3330000/3326055/p287-shen.pdf?ip=71.207.13.18&id=3326055&acc=OPEN&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1562643396_3badde387ece3e96f9588aabe1495942"
+url_pdf = "https://dl.acm.org/citation.cfm?id=3326055"
 url_preprint = "http://pike.psu.edu/publications/websci19-sus.pdf"
-url_code = "#"
-url_dataset = "#"
-url_project = "#"
-url_slides = "#"
-url_video = "#"
+url_code = "https://github.com/tbs17/Research/tree/master/susceptibility/code"
+url_dataset = "https://github.com/tbs17/Research/tree/master/susceptibility/data"
+url_project = "https://sites.google.com/site/pikesysfake/home"
+# url_slides = "#"
+# url_video = "#"
 url_poster = "#"
-url_source = "#"
+# url_source = "#"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Custom Link", url = "http://example.org"}]
+# url_custom = [{name = "Custom Link", url = "http://example.org"}]
 
 # Does the content use math formatting?
 math = true
