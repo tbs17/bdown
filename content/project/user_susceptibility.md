@@ -17,7 +17,7 @@ tags = ["machine-learning"]
 
 
 # Optional external URL for project (replaces project detail page).
-external_link = ""
+external_link = "http://delivery.acm.org/10.1145/3330000/3326055/p287-shen.pdf?ip=71.207.13.18&id=3326055&acc=OPEN&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1562643396_3badde387ece3e96f9588aabe1495942"
 
 # Does the project detail page use math formatting?
 math = false
