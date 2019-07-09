@@ -7,9 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 02 Jul 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://thinkregressively.netlify.com/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How Gullible Are You? Predicting Susceptibility to Fake News</title>
+      <link>https://thinkregressively.netlify.com/publication/gullible/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/publication/gullible/</guid>
+      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
     
   </channel>
 </rss>

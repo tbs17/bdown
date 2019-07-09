@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://thinkregressively.netlify.com/publication/gullible/</loc>
+      <lastmod>2019-07-02T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</loc>
       <lastmod>2019-01-21T21:32:20-05:00</lastmod>
     </url>
@@ -96,6 +105,17 @@
     <url>
     
       <loc>https://thinkregressively.netlify.com/publication/</loc>
+      <lastmod>2019-07-02T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://thinkregressively.netlify.com/publication_types/1/</loc>
+      <lastmod>2019-07-02T00:00:00-04:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -163,6 +183,7 @@
     <url>
     
       <loc>https://thinkregressively.netlify.com/publication_types/</loc>
+      <lastmod>2019-07-02T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
