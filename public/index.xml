@@ -162,6 +162,15 @@ np.savetxt(&amp;#39;tf_predictions.csv&amp;#39;,final_preds,delimiter=&amp;#39;,
     </item>
     
     <item>
+      <title>Memory Illusion</title>
+      <link>https://thinkregressively.netlify.com/project/memory_illusion/</link>
+      <pubDate>Mon, 09 Jul 2018 10:00:00 -0400</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/project/memory_illusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SysFake</title>
       <link>https://thinkregressively.netlify.com/project/user_susceptibility/</link>
       <pubDate>Sun, 01 Jul 2018 10:00:00 -0400</pubDate>

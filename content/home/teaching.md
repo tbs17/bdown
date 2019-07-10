@@ -15,7 +15,7 @@ weight = 30
 
 +++
 
-I am a teaching assistant for the following courses at Penn State University:
+I was a teaching assistant for the following courses at Penn State University:
 
 **SRA468:Spatial Analysis of Risk-Fall 2018**: 
 

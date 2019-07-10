@@ -50,6 +50,15 @@
     
     <url>
     
+      <loc>https://thinkregressively.netlify.com/project/memory_illusion/</loc>
+      <lastmod>2018-07-09T10:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://thinkregressively.netlify.com/project/user_susceptibility/</loc>
       <lastmod>2018-07-01T10:00:00-04:00</lastmod>
     </url>
@@ -142,6 +151,16 @@
     
     <url>
     
+      <loc>https://thinkregressively.netlify.com/tags/cognitive-science/</loc>
+      <lastmod>2018-07-09T10:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://thinkregressively.netlify.com/tags/data-science/</loc>
       <lastmod>2018-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -163,7 +182,7 @@
     <url>
     
       <loc>https://thinkregressively.netlify.com/tags/machine-learning/</loc>
-      <lastmod>2018-07-01T10:00:00-04:00</lastmod>
+      <lastmod>2018-07-09T10:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -173,7 +192,17 @@
     <url>
     
       <loc>https://thinkregressively.netlify.com/project/</loc>
-      <lastmod>2018-07-01T10:00:00-04:00</lastmod>
+      <lastmod>2018-07-09T10:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://thinkregressively.netlify.com/tags/psychology/</loc>
+      <lastmod>2018-07-09T10:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
