@@ -38,6 +38,135 @@
     </item>
     
     <item>
+      <title>How to do modular coding</title>
+      <link>https://thinkregressively.netlify.com/post/how-to-do-modular-coding/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/post/how-to-do-modular-coding/</guid>
+      <description>&lt;p&gt;Recently, the Data Science Team at AccuWeather has been promoting modular coding to better our coding skills and make our work more efficient. So what is modular coding? Per wikipedia, modular programming is a software design technique that emphasizes separating the functionality of a program into independent, interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality. To simply put, it means that anything you will need to use repeatedly should be written into a function or even a module that you can just easily call/import it. At the very beginning, this idea wasn’t so welcome within the team as it drastically increase the time we spend on data science coding and it’s just so cumbersome to adopt. However, after the Director of Data Science persisted to ask us to showcase our modular coding at a code showcase meeting, I finally got a hang of it and would like to showcase a simple example of module coding: MAKE A MODULE AND IMPORT IT!&lt;/p&gt;
+&lt;div id=&#34;step1-find-the-repeated-work-you-would-need-to-do&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;STEP1: Find the repeated work you would need to do&lt;/h3&gt;
+&lt;p&gt;Often, we will come across certain process or line of codes that we’d like to use many times and copy&amp;amp;paste made it so sweet and easy. However, it still takes time to copy and paste plus you need to dig that code out. What if you can easily call it just like &lt;code&gt;import pandas as pd&lt;/code&gt;? Of course, only a couple lines of code is not worth inventing the wheel. What about a massive modeling process such as you have to cycle through each state to make a each model and each model has to be iterated above 5000 times. That sounds like a worthy project to use modular coding. Therefore, I chose the below modeling process to start with my modular coding.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from sklearn.model_selection import train_test_split 
+import xgboost as xgb
+from sklearn.model_selection import cross_validate
+from sklearn import metrics
+LABEL = &amp;#39;cpi&amp;#39;       
+# model each category and check # impressions
+# create feature list for modeling
+varimporder = []
+varaddunit = []
+FEATURES = [feat for feat in list(merged_df1_m) if feat not in [&amp;#39;date&amp;#39;, &amp;#39;metro&amp;#39;,&amp;#39;imps&amp;#39;, &amp;#39;clks&amp;#39;, &amp;#39;cpi&amp;#39;, &amp;#39;state&amp;#39;]]
+idv_list = []
+metros = set(merged_df1_m[&amp;#39;metro&amp;#39;])
+for metro in metros:
+    tmp_df = merged_df1_m[merged_df1_m[&amp;#39;metro&amp;#39;]== metro]
+    
+    print(metro)
+    idv_list.append(metro)
+    x_train, x_test, y_train, y_test = train_test_split(tmp_df, tmp_df[LABEL], 
+                                                               test_size=0.33, random_state=42)
+    dtrain = xgb.DMatrix(data = x_train[FEATURES],  label = y_train)
+    dval = xgb.DMatrix(data = x_test[FEATURES], label = y_test)
+    param = {&amp;#39;max_depth&amp;#39;:5, 
+                &amp;#39;eta&amp;#39;:0.001, 
+                &amp;#39;silent&amp;#39;:1, 
+                &amp;quot;objective&amp;quot;:&amp;quot;reg:linear&amp;quot;,
+                &amp;quot;eval_metric&amp;quot;:&amp;quot;rmse&amp;quot;,
+                &amp;#39;subsample&amp;#39;: 0.8,
+                &amp;#39;maximize&amp;#39;: False,
+                &amp;#39;colsample_bytree&amp;#39;: 0.8}
+    evals = [(dtrain,&amp;#39;train&amp;#39;),(dval,&amp;#39;test&amp;#39;)]
+    clf = xgb.train ( params = param,
+                  dtrain = dtrain,
+                  num_boost_round = 50000,
+                  verbose_eval=100, 
+                  early_stopping_rounds = 500,
+                  evals=evals)
+    importances = clf.get_fscore()
+    importance_frame = pd.DataFrame({&amp;#39;Importance&amp;#39;: list(importances.values()), &amp;#39;Feature&amp;#39;: list(importances.keys())})
+    importance_frame.sort_values(by = &amp;#39;Importance&amp;#39;, inplace = True, ascending= False)
+    print(importance_frame)
+    varaddunit.append(metro)
+    varimporder.append(importance_frame[&amp;#39;Feature&amp;#39;].values)
+        &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step2-spot-out-the-repetitive-parts-of-the-code&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;STEP2: Spot out the repetitive parts of the code&lt;/h3&gt;
+&lt;p&gt;In the above code snippet, I was trying to fit an XGBoost regression model for each state data. There, I know I will need to repeat the below steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;train_test_split&lt;/code&gt; for each state data&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;they share the same DV and IV&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the algorithm parameters will be more or less the same&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;They will output into the same kind of &lt;code&gt;data.frame&lt;/code&gt; to show the import features&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After knowing that, I then just replace the repeated parts into a universal variable and wrap all these into a function with the variables subject to change. See below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I have made three variables to fill up in the function: &lt;code&gt;non_features&lt;/code&gt;, &lt;code&gt;data&lt;/code&gt;, &lt;code&gt;loop_feat&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;substitute the actual names with the variables in the function&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;added &lt;code&gt;if___name___==&#39;main&#39;:&lt;/code&gt; syntax in case I also would like to call it in the current module or test it out&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;save it as &lt;code&gt;xg_boost.py&lt;/code&gt; and put it in the site packages underneath the &lt;code&gt;site-packages&lt;/code&gt; of your current python interpreter path. THIS IS VERY IMPORTANT! If you didn’t put the module under the interpreter’s path, the module wouldn’t load.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;import pandas as pd
+from sklearn.model_selection import train_test_split
+import xgboost as xgb
+# Class model(object):
+def xgboost_model(non_features,data,loop_feat):
+    LABEL = &amp;#39;cpi&amp;#39;
+    # model each category and check # impressions
+    # create feature list for modeling
+    varimporder = []
+    varaddunit = []
+    feat_list = [feat for feat in list(data) if feat not in non_features]
+    idv_list = []
+    target = set(data[loop_feat])
+    for item in target:
+        tmp_df = data[data[loop_feat] == item]
+        if len(tmp_df) &amp;gt; 1000:
+            print(item)
+            idv_list.append(item)
+            x_train, x_test, y_train, y_test = train_test_split(tmp_df, tmp_df[LABEL],
+                                                                test_size=0.33, random_state=42)
+            dtrain = xgb.DMatrix(data=x_train[feat_list], label=y_train)
+            dval = xgb.DMatrix(data=x_test[feat_list], label=y_test)
+            param = {&amp;#39;max_depth&amp;#39;: 5,
+                     &amp;#39;eta&amp;#39;: 0.001,
+                     &amp;#39;silent&amp;#39;: 1,
+                     &amp;quot;objective&amp;quot;: &amp;quot;reg:linear&amp;quot;,
+                     &amp;quot;eval_metric&amp;quot;: &amp;quot;rmse&amp;quot;,
+                     &amp;#39;subsample&amp;#39;: 0.8,
+                     &amp;#39;maximize&amp;#39;: False,
+                     &amp;#39;colsample_bytree&amp;#39;: 0.8}
+            evals = [(dtrain, &amp;#39;train&amp;#39;), (dval, &amp;#39;test&amp;#39;)]
+            clf = xgb.train(params=param,
+                            dtrain=dtrain,
+                            num_boost_round=5000,
+                            verbose_eval=50,
+                            early_stopping_rounds=500,
+                            evals=evals)
+            importances = clf.get_fscore()
+            importance_frame = pd.DataFrame({&amp;#39;Importance&amp;#39;: list(importances.values()), &amp;#39;Feature&amp;#39;: list(importances.keys())})
+            importance_frame.sort_values(by=&amp;#39;Importance&amp;#39;, inplace=True, ascending=False)
+            print(importance_frame)
+            varaddunit.append(item)
+            varimporder.append(importance_frame[&amp;#39;Feature&amp;#39;].values)
+if __name__==&amp;#39;main&amp;#39;:
+    results=xgboost_model(non_features,data,loop_feat)
+    print(results)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step3-call-the-module-and-fill-in-the-variabls&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;STEP3: call the module and fill in the variabls&lt;/h3&gt;
+&lt;p&gt;As a final step, we will just use&lt;code&gt;import xgboost_model&lt;/code&gt; to call the function/module, then swap in all the different names for the variables. Voila, you got it. You have a simple modular coding. Note that &lt;code&gt;xg_boost&lt;/code&gt; is the name of the module I created. &lt;code&gt;xgboost_model&lt;/code&gt; is the function within the module.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;import xg_boost
+non_features0=[&amp;#39;date&amp;#39;, &amp;#39;metro&amp;#39;,&amp;#39;imps&amp;#39;, &amp;#39;clks&amp;#39;, &amp;#39;cpi&amp;#39;, &amp;#39;state&amp;#39;,&amp;#39;cur_skycode&amp;#39;]
+# label0=&amp;#39;cpi&amp;#39;
+loop_feat0=&amp;#39;state&amp;#39;
+xg_boost.xgboost_model(non_features0, duracell, loop_feat0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How Gullible Are You? Predicting Susceptibility to Fake News</title>
       <link>https://thinkregressively.netlify.com/publication/gullible/</link>
       <pubDate>Tue, 02 Jul 2019 00:00:00 -0400</pubDate>

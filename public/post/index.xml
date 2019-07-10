@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>How to do modular coding</title>
+      <link>https://thinkregressively.netlify.com/post/how-to-do-modular-coding/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/post/how-to-do-modular-coding/</guid>
+      <description>Recently, the Data Science Team at AccuWeather has been promoting modular coding to better our coding skills and make our work more efficient. So what is modular coding? Per wikipedia, modular programming is a software design technique that emphasizes separating the functionality of a program into independent, interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality. To simply put, it means that anything you will need to use repeatedly should be written into a function or even a module that you can just easily call/import it.</description>
+    </item>
+    
+    <item>
       <title>How to Query from Google BigQuery and Azure SQL Database at the same time in Python</title>
       <link>https://thinkregressively.netlify.com/post/cloud-data-base-connection/</link>
       <pubDate>Mon, 21 Jan 2019 21:32:20 -0500</pubDate>
