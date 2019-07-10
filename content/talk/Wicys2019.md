@@ -2,13 +2,13 @@
 date = 2019-07-09T00:00:00  # Schedule page publish date.
 
 title = "2019 WiCYS(Women in Cyber Security) Conference"
-time_start = 2019-06-30T14:00:00
-time_end = 2019-07-03T15:30:00
+time_start = 2019-03-28T14:00:00
+time_end = 2019-03-31T15:30:00
 abstract = ""
 abstract_short = ""
 event = "Scholarship Award"
 event_url = "https://www.wicys.org/conference-2019-home"
-location = "Carneigie Melon University, Pittsburgh"
+location = "Carneigie Melon University, Pittsburgh PA"
 
 # Is this a selected talk? (true/false)
 selected = false

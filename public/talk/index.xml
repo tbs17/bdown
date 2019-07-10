@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>2019 Grace Hopper Celebration (GHC 19)</title>
+      <link>https://thinkregressively.netlify.com/talk/ghc2019/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://thinkregressively.netlify.com/talk/ghc2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>2019 WiCYS(Women in Cyber Security) Conference</title>
       <link>https://thinkregressively.netlify.com/talk/wicys2019/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
@@ -27,15 +36,6 @@
       <pubDate>Tue, 09 Jul 2019 00:00:00 -0400</pubDate>
       
       <guid>https://thinkregressively.netlify.com/talk/opendatasci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>11th ACM Conference on Web Science</title>
-      <link>https://thinkregressively.netlify.com/talk/ghc2019/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 -0400</pubDate>
-      
-      <guid>https://thinkregressively.netlify.com/talk/ghc2019/</guid>
       <description></description>
     </item>
     
