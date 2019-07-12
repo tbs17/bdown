@@ -44,7 +44,7 @@ url_dataset = "https://github.com/tbs17/Research/tree/master/susceptibility/data
 url_project = "https://sites.google.com/site/pikesysfake/home"
 # url_slides = "#"
 # url_video = "#"
-url_poster = "https://thinkregressively.netlify.com/Susceptibility_poster_TracyShen_websci.pdf"
+url_poster = "https://thinkregressively.com/Susceptibility_poster_TracyShen_websci.pdf"
 # url_source = "#"
 
 # Custom links (optional).
